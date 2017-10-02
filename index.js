@@ -4,8 +4,10 @@ const express = require('express'); // common js modules (node has support for c
 const app=express();// app object represents underlying running express server
 
 app.get('/',(req,res)=> {	// handle incoming http request
-	res.send({hi:'there'});
+	res.send({bye:'there'});
 });
+
+
 
 const PORT= process.env.PORT;
 
