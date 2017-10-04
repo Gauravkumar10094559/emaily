@@ -22,7 +22,7 @@ passport.use(
 		{
 			clientID: keys.googleClientID,
 			clientSecret: keys.googleClientSecret,
-			proxy:true
+			proxy: true,
 			callbackURL: "/auth/google/callback"
 			//heroku uses proxy to identify the server assigned to use
 			//thats where the https is changed to http
