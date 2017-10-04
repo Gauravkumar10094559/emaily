@@ -62,8 +62,15 @@ mongoose.connect(keys.mongoURI);
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-	console.log("==> Server has started <==");
-}); // telling node to listen on this port
+	// for deployment use env.port and not hardcoded port
+	console.log(
+		"Express server listening on port %d in %s mode",
+		this.address().port,
+		app.settings.env
+	);
+});
+
+// telling node to listen on this port
 
 //sessions mean keeping the users logged in even when they have refreshed.
 
@@ -72,3 +79,5 @@ app.listen(PORT, () => {
 //clientId   464560114914-d46hh8476kao5u4s634s6c3gqd9ln3cd.apps.googleusercontent.com
 
 //secret   ItOqS1toWLKn81DipSAxsuyb
+
+//mongodb://gauravprod:gauravprod@mlab@ds163294.mlab.com:63294/gaurav-emaily-prod
