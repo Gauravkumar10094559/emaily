@@ -63,11 +63,7 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
 	// for deployment use env.port and not hardcoded port
-	console.log(
-		"Express server listening on port %d in %s mode",
-		this.address().port,
-		app.settings.env
-	);
+	console.log("Server has started");
 });
 
 // telling node to listen on this port
@@ -80,4 +76,4 @@ app.listen(PORT, () => {
 
 //secret   ItOqS1toWLKn81DipSAxsuyb
 
-//mongodb://gauravprod:gauravprod@mlab@ds163294.mlab.com:63294/gaurav-emaily-prod
+//mongodb://gkprod:password@ds163294.mlab.com:63294/gaurav-emaily-prod
