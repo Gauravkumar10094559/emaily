@@ -19,8 +19,8 @@ module.exports = app => {
 		});
 
 		// console.log(charge);
-		console.log(req.user);// user schema available because of passport middleware 
-		req.user+=5;
+		// console.log(req.user);// user schema available because of passport middleware 
+		req.user.credits+=5;
 		const user= await req.user.save();
 		res.send(user);
 

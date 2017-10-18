@@ -13,6 +13,9 @@ require("./models/user");
 require("./services/passport"); // we just want that code to execute and we dont want it back
 // const authRoutes=require('./routes/authRoutes');
 
+
+// mongoose.Promise = global.Promise;
+
 const app = express(); // app object represents underlying running express server
 
 app.use(bodyParser.json());//anytime a post, put, patch request comes this middleware will parse the request and put it in req.body
