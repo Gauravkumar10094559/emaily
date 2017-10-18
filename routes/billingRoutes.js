@@ -11,6 +11,7 @@ module.exports = app => {
 		// 	return res.send(401).send({ error:'You must log in! '});//401 is unauthorized
 		// }
 
+		try {
 		const charge = await stripe.charges.create({
 			amount:500,
 			currency:'usd',
@@ -23,6 +24,10 @@ module.exports = app => {
 		req.user.credits+=5;
 		const user= await req.user.save();
 		res.send(user);
+		}
+		catch(error) {
+			console.log(error);
+		}
 
 	});
 };

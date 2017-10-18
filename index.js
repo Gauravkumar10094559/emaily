@@ -14,7 +14,7 @@ require("./services/passport"); // we just want that code to execute and we dont
 // const authRoutes=require('./routes/authRoutes');
 
 
-// mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise;
 
 const app = express(); // app object represents underlying running express server
 
