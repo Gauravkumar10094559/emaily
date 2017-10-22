@@ -15,7 +15,7 @@ const surveySchema = new Schema({
 		type:Number,
 		default:0
 	},
-	_user:{	// to make it obvious to show the relationship
+	_User:{	// to make it obvious to show the relationship
 		type:Schema.Types.ObjectId, //id of that user
 		ref:'User'	//users collection
 	},

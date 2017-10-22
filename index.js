@@ -68,8 +68,10 @@ if(process.env.NODE_ENV==='production') {
 
 
 
-
-//https://asdjkflkewurqwoe.localtunnel.me
+// in send grid under settings and then mail settings
+// HTTP POST URL
+// for email notification
+// //https://asdjkflkewurqwoe.localtunnel.me
 
 
 
