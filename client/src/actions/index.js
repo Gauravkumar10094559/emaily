@@ -1,5 +1,6 @@
 import axios from "axios";
 import { FETCH_USER } from "./types";
+import { FETCH_SURVEYS } from "./types";
 
 
 
@@ -13,6 +14,19 @@ export const fetchUser = () => async dispatch => {
 export const handleToken= token => async dispatch => {
 	const res = await axios.post('/api/stripe',token);//token is what sent to the backend you dummy
 	dispatch({ type:FETCH_USER, payload:res.data});
+};
+
+export const submitSurvey=(values,history)=> async dispatch => {
+	const res = await axios.post('/api/surveys',values);//values to send to the backend
+	history.push('/surveys');//to go to this route after req
+	dispatch({ type:FETCH_USER, payload:res.data});//FETCH_USER is used because to update the header which is 
+	//done with the help of res.send(user) in the backend.
+ 
+};
+
+export const fetchSurveys = () => async dispatch => {
+	const res= await axios.get('/api/surveys');
+	dispatch({type:FETCH_SURVEYS,payload:res.data});
 };
 
 // export const fetchUser=() => {

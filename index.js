@@ -8,7 +8,8 @@ const mongoose = require("mongoose");
 const cookieSession = require("cookie-session");
 const passport = require("passport");
 const bodyParser = require("body-parser"); //its a middleware so make use of app.use
-require("./models/user");
+require("./models/User");
+require("./models/Survey");
 // const passportConfig=
 require("./services/passport"); // we just want that code to execute and we dont want it back
 // const authRoutes=require('./routes/authRoutes');
@@ -34,6 +35,7 @@ app.use(passport.session()); //preprocessing on requests before they are sent ou
 // authRoutes(app);
 require("./routes/authRoutes")(app);
 require("./routes/billingRoutes")(app);
+require("./routes/surveyRoutes")(app);
 
 mongoose.connect(keys.mongoURI);
 
@@ -67,7 +69,7 @@ if(process.env.NODE_ENV==='production') {
 
 
 
-
+//https://asdjkflkewurqwoe.localtunnel.me
 
 
 

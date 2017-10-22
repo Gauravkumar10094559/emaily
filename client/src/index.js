@@ -20,6 +20,12 @@ import reduxThunk from 'redux-thunk';
 import App from './components/App';
 import reducers from './reducers';
 
+
+// to check backend without front end
+import axios from 'axios';
+window.axios=axios;
+
+
 //createStore will make a new instance of the redux store and inside -1.arg is all the reducers. 2 arg is the initial state 3.arg is the middlewares
 // const store=createStore(() =>[],{},applyMiddleware());//redux store (to give the ability to access to data from a deeply nested component)
 const store=createStore(reducers,{},applyMiddleware(reduxThunk));//redux store (to give the ability to access to data from a deeply nested component)
