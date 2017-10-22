@@ -15,7 +15,7 @@ const surveySchema = new Schema({
 		type:Number,
 		default:0
 	},
-	_User:{	// to make it obvious to show the relationship
+	_user:{	// to make it obvious to show the relationship
 		type:Schema.Types.ObjectId, //id of that user
 		ref:'User'	//users collection
 	},
@@ -23,4 +23,4 @@ const surveySchema = new Schema({
 	lastResponded:Date
 });
 
-mongoose.model('Survey',surveySchema);
+mongoose.model('surveys',surveySchema);
